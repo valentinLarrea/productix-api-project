@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
+    <title>Productix</title>
+</head>
+
+<body>
+    <header>
+        <img src="img/PRODUCTIX-removebg-preview.png" class="logo" alt="logo">
+        <nav class="menuEscritorio">
+            <a href="index.html">Inicio</a>
+            <a href="verTabla.html" id="visualizar">Actualizar</a>
+        </nav>
+        <button class="botonMobile" onclick="MenuMobile()">☰</button>
+        <div class="menuMobile">
+            <button class="cerrarMobile">✕</button>
+            <nav>
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main2">
+        <div class="tabla-container">
+            <div class="buscadorContainer">
+                <label for="">Busca tu producto</label>
+                <input type="text" class="input" id="buscador" onkeyup="Filtrar()" placeholder="Buscar..">
+                <a href="verTabla.html" class="actualizarMobile" id="visualizar">Actualizar</a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="idcod"></th>
+                        <th>ID</th>
+                        <th>Titulo</th>
+                        <th>Precio ($)</th>
+                        <th>Precio (US$)</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+            </table>
+            <table id="tabla">
+                <tbody id="tabla-body">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="column">
+            <a href="">Contacto</a>
+            <a href="">Soporte</a>
+        </div>
+        <div class="img img-footer"></div>
+        <div class="column">
+            <a href="">Sobre nosotros</a>
+            <a href="">Legal</a>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

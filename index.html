@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+    </style>
+    <title>Productix</title>
+</head>
+
+<body>
+    <header id="header">
+        <img src="img/PRODUCTIX-removebg-preview.png" class="logo" alt="logo">
+        <nav class="menuEscritorio">
+            <a href="verTabla.html" id="visualizar">Ver Productos</a>
+        </nav>
+        <button class="botonMobile" onclick="MenuMobile()">☰</button>
+        <div class="menuMobile">
+            <button class="cerrarMobile">✕</button>
+            <nav>
+                <a href="verTabla.html" id="visualizar">Ver Productos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main">
+            <form class="form" id="agregar" method="post">
+                <label for="">Agregar</label>
+                <input class="input" id="titulo" type="text" name="titulo" placeholder="Titulo.." required="">
+                <input class="input" id="precioPeso" type="number" name="precioPeso" placeholder="Precio ($).."
+                    required="">
+                <input class="input" id="precioDolar" type="number" name="precioDolar" placeholder="Precio (US$).."
+                    required="">
+                <input class="input" id="fecha" type="date" name="fecha" placeholder="Fecha.." required="">
+                <button type="submit" class="btnAgregar">Agregar</button>
+            </form>
+        </div>
+        <div class="main">
+            <form class="form" id="modificar">
+                <label for="">Modificar</label>
+                <input class="input" id="idcod" type="text" name="id" placeholder="ID" required="">
+                <input class="input" id="tituloNuevo" type="text" name="titulo" placeholder="Nuevo titulo.."
+                    required="">
+                <input class="input" id="precioPesoNuevo" type="number" name="precioPeso"
+                    placeholder="Nuevo precio ($).." required="">
+                <input class="input" id="precioDolarNuevo" type="number" name="precioDolar"
+                    placeholder="Nuevo precio (US$).." required="">
+                <input class="input" id="fechaNueva" type="date" name="fecha" placeholder="Nueva fecha.." required="">
+                <button type="submit">Modificar</button>
+            </form>
+        </div>
+        <div class="main">
+            <form class="form" id="eliminar">
+                <label for="">Eliminar</label>
+                <input class="input" id="id" type="text" name="id" placeholder="ID" required="">
+                <button type="submit" class="btnEliminar">Eliminar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="column">
+            <a href="">Contacto</a>
+            <a href="">Soporte</a>
+        </div>
+        <div class="img img-footer"></div>
+        <div class="column">
+            <a href="">Sobre nosotros</a>
+            <a href="">Legal</a>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

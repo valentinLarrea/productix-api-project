@@ -1,0 +1,401 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuMobile {
+    background: linear-gradient(25deg, #240046, #6d44b8 );
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.botonMobile {
+    display: none;
+}
+
+.menuMobile.abrir {
+    right: 0;
+}
+
+.menuMobile nav {
+    position: relative;
+    top: 70px;
+    right: -10px;
+}
+
+.menuMobile nav a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    background: transparent;
+    display: flex;
+    justify-content: end;
+}
+
+.cerrarMobile {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    position: relative;
+    float: right;
+    top: 24px;
+}
+
+nav a {
+    background-color: #9466e9;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 10px;
+    margin: 0 18px;
+    font-family: "Josefin Sans";
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #6d44b8;
+    transition: all .2s;
+}
+
+.logo {
+    width: 120px;
+    margin: 0 18px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin: 0px 0px;
+    background-color: #9466e9;
+    padding: 20px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #240046;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 2px 2px 20px black;
+    transition: all .5s;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+label {
+    color: #fff;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-family: 'Josefin Sans';
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    background: #e0dede;
+    padding: 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    height: 40px;
+    margin: 12px auto 10%;
+    color: #fff;
+    background: #7e57c6;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s ease-in;
+    font-family: "Fjalla One";
+}
+
+.form button:hover {
+    background-color: #6d44b8;
+}
+
+.btnAgregar {
+    position: relative;
+    top: 50px;
+}
+
+.btnEliminar {
+    position: relative;
+    top: 200px;
+}
+
+.main2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px;
+    background-color: #9466e9;
+    padding: 20px;
+}
+
+.tabla-container {
+    width: 700px;
+    height: 400px;
+    box-shadow: 2px 2px 10px black;
+    overflow-y: scroll;
+    background-color: #6d44b8;
+}
+
+.buscadorContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #240046;
+}
+
+.buscadorContainer label {
+    margin-top: 10px;
+}
+
+#buscador {
+    width: 250px;
+    margin: 5px auto;
+    border-radius: 5px;
+    border: none;
+    padding: 0 5px;
+}
+
+table {
+    color: white;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: #240046;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+}
+
+th {
+    padding: 15px 15px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Fjalla One';
+    font-size: 15px;
+}
+
+tbody {
+    background-color: #6d44b8;
+    overflow: hidden;
+}
+
+tbody tr {
+    transition: all .3s;
+}
+
+tbody tr:hover {
+    background-color: #9466e9;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    height: 125px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Josefin Sans';
+    font-weight: 800;
+}
+
+.column {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.img-footer {
+    background-image: url(img/logo.png);
+    background-size: contain;
+}
+
+.botonCopiar {
+    padding: 6px;
+    cursor: pointer;
+    background-color: #240046;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.botonCopiar:hover {
+    background-color: #6d44b8;
+}
+
+.actualizarMobile {
+    display: none;
+    padding: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color:#9466e9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Josefin Sans';
+    width: 100px;
+    margin: 2px auto;
+    transition: all .3s;
+}
+
+.actualizarMobile:hover {
+    background-color: #4b0c85;
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        overflow: scroll;
+        width: 100%;
+    }
+
+    .menuEscritorio {
+        display: none;
+    }
+
+    .botonMobile {
+        display: block;
+        position: relative;
+        right: 15px; 
+        color: #240046;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menuMobile.abrir {
+        box-shadow: 30px 30px 800px black;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .main2 {
+        width: 100%;
+        padding: 0;
+        height: 550px;
+    }
+
+    .tabla-container {
+        width: 100%;
+        box-shadow: none;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .actualizarMobile {
+        margin-bottom: 15px;
+    }
+
+    .botonCopiar {
+        padding: 2px;
+    }
+
+    table {
+        color: white;
+        font-size: 14px;
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    thead {
+        background-color: #240046;
+        font-family: 'Josefin Sans';
+        font-size: 15px;
+    }
+    
+    th {
+        padding: 10px;
+    }
+    
+    td {
+        padding: 5px;
+        text-align: center;
+        font-family: 'Fjalla One';
+        font-size: 13px;
+    }
+
+    footer {
+        display: flex;
+        height: 150px;
+        justify-content: space-between;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .actualizarMobile {
+        display: block;
+    }
+
+}
+
