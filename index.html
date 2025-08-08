@@ -2,26 +2,41 @@
 <html lang="en">
 
 <head>
+    <!-- Configuración de codificación de caracteres y viewport responsivo -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Importación de fuentes de Google Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     </style>
+    
     <title>Productix</title>
 </head>
 
 <body>
+    <!-- HEADER: Barra de navegación principal -->
     <header id="header">
+        <!-- Logo de la aplicación -->
         <img src="img/PRODUCTIX-removebg-preview.png" class="logo" alt="logo">
+        
+        <!-- Navegación para escritorio -->
         <nav class="menuEscritorio">
             <a href="verTabla.html" id="visualizar">Ver Productos</a>
         </nav>
+        
+        <!-- Botón hamburguesa para menú móvil -->
         <button class="botonMobile" onclick="MenuMobile()">☰</button>
+        
+        <!-- Menú desplegable para dispositivos móviles -->
         <div class="menuMobile">
+            <!-- Botón para cerrar el menú móvil -->
             <button class="cerrarMobile">✕</button>
             <nav>
                 <a href="verTabla.html" id="visualizar">Ver Productos</a>
@@ -29,53 +44,94 @@
         </div>
     </header>
 
+    <!-- MAIN: Contenido principal con formularios CRUD -->
     <main>
+        <!-- FORMULARIO 1: AGREGAR PRODUCTO -->
         <div class="main">
+            <!-- Formulario para crear nuevos productos via API POST -->
             <form class="form" id="agregar" method="post">
                 <label for="">Agregar</label>
+                
+                <!-- Campo: Título del producto (requerido) -->
                 <input class="input" id="titulo" type="text" name="titulo" placeholder="Titulo.." required="">
+                
+                <!-- Campo: Precio en pesos (requerido) -->
                 <input class="input" id="precioPeso" type="number" name="precioPeso" placeholder="Precio ($).."
                     required="">
+                
+                <!-- Campo: Precio en dólares (requerido) -->
                 <input class="input" id="precioDolar" type="number" name="precioDolar" placeholder="Precio (US$).."
                     required="">
+                
+                <!-- Campo: Fecha del producto (requerido) -->
                 <input class="input" id="fecha" type="date" name="fecha" placeholder="Fecha.." required="">
+                
+                <!-- Botón de envío del formulario -->
                 <button type="submit" class="btnAgregar">Agregar</button>
             </form>
         </div>
+        
+        <!-- FORMULARIO 2: MODIFICAR PRODUCTO -->
         <div class="main">
+            <!-- Formulario para actualizar productos existentes via API PATCH -->
             <form class="form" id="modificar">
                 <label for="">Modificar</label>
+                
+                <!-- Campo: ID del producto a modificar (requerido) -->
                 <input class="input" id="idcod" type="text" name="id" placeholder="ID" required="">
+                
+                <!-- Campo: Nuevo título del producto (requerido) -->
                 <input class="input" id="tituloNuevo" type="text" name="titulo" placeholder="Nuevo titulo.."
                     required="">
+                
+                <!-- Campo: Nuevo precio en pesos (requerido) -->
                 <input class="input" id="precioPesoNuevo" type="number" name="precioPeso"
                     placeholder="Nuevo precio ($).." required="">
+                
+                <!-- Campo: Nuevo precio en dólares (requerido) -->
                 <input class="input" id="precioDolarNuevo" type="number" name="precioDolar"
                     placeholder="Nuevo precio (US$).." required="">
+                
+                <!-- Campo: Nueva fecha del producto (requerido) -->
                 <input class="input" id="fechaNueva" type="date" name="fecha" placeholder="Nueva fecha.." required="">
+                
+                <!-- Botón de envío del formulario -->
                 <button type="submit">Modificar</button>
             </form>
         </div>
+        
+        <!-- FORMULARIO 3: ELIMINAR PRODUCTO -->
         <div class="main">
+            <!-- Formulario para eliminar productos via API DELETE -->
             <form class="form" id="eliminar">
                 <label for="">Eliminar</label>
+                
+                <!-- Campo: ID del producto a eliminar (requerido) -->
                 <input class="input" id="id" type="text" name="id" placeholder="ID" required="">
+                
+                <!-- Botón de envío del formulario -->
                 <button type="submit" class="btnEliminar">Eliminar</button>
             </form>
         </div>
     </main>
+    
+    <!-- FOOTER: Pie de página con enlaces de navegación secundaria -->
     <footer>
+        <!-- Columna izquierda: Enlaces de contacto y soporte -->
         <div class="column">
             <a href="">Contacto</a>
             <a href="">Soporte</a>
         </div>
+        
+        <!-- Elemento central: Imagen/logo del footer -->
         <div class="img img-footer"></div>
+        
+        <!-- Columna derecha: Enlaces institucionales -->
         <div class="column">
             <a href="">Sobre nosotros</a>
             <a href="">Legal</a>
         </div>
     </footer>
 </body>
-<script src="script.js"></script>
 
-</html>
+<!-- Script principal: Maneja la lógica de los formularios y API --
